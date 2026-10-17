@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Study Centre for Africa, North & South America | Quaid-i-Azam University</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display, EB Garamond & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oxford: {
+                            900: '#001530',
+                            800: '#002147',
+                            700: '#0a3161',
+                            50: '#f0f4f8'
+                        },
+                        royalGold: {
+                            DEFAULT: '#D4AF37',
+                            dark: '#b38f24',
+                            light: '#f3e5ab'
+                        },
+                        ochre: '#C5A059',
+                        royalCrimson: '#800020',
+                        parchment: '#FDFBF7',
+                        cream: '#F5F2EB'
+                    },
+                    fontFamily: {
+                        serifHeading: ['Playfair Display', 'Georgia', 'serif'],
+                        serifBody: ['EB Garamond', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-oxford-pattern {
+            background: linear-gradient(135deg, rgba(0, 21, 48, 0.95) 0%, rgba(10, 49, 97, 0.88) 100%), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gold-border-box {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 33, 71, 0.08);
+        }
+
+        .badge-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.6); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(128, 0, 32, 0); }
+            100% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(128, 0, 32, 0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F2EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #002147;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-parchment text-gray-800 antialiased selection:bg-royalGold selection:text-oxford-900">
+
+    <!-- Statutory Header Bar -->
+    <div class="bg-oxford-900 text-gray-200 text-xs py-2 px-4 sm:px-8 border-b border-royalGold/30">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-royalGold text-oxford-900 uppercase tracking-widest">Autonomous Institution</span>
+                <span class="font-serifBody text-sm"><i class="fa-solid fa-scroll text-royalGold mr-1.5"></i> Area Study Centres Act No. XLV of 1975 (Government of Pakistan)</span>
+            </div>
+            <div class="flex items-center gap-6 font-sans text-xs">
+                <a href="https://qau.edu.pk" target="_blank" rel="noopener" class="hover:text-royalGold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap text-royalGold"></i> Quaid-i-Azam University, Islamabad
+                </a>
+                <span class="hidden md:inline text-gray-600">|</span>
+                <span class="hidden md:inline text-gray-300"><i class="fa-solid fa-landmark text-royalGold"></i> Faculty of Social Sciences</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white sticky top-0 z-50 shadow-md border-b-4 border-oxford-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                
+                <!-- Crest & Title -->
+                <a href="#home" class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-oxford-800 border-2 border-royalGold flex items-center justify-center text-royalGold text-2xl font-serifHeading shadow-lg group-hover:bg-oxford-900 transition-colors flex-shrink-0 relative">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="absolute -bottom-1 text-[8px] bg-royalGold text-oxford-900 px-1 font-bold rounded">1975</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serifHeading text-lg sm:text-xl md:text-2xl font-bold text-oxford-800 tracking-tight leading-tight">
+                            Area Study Centre
+                        </h1>
+                        <p class="font-serifBody text-xs sm:text-sm text-royalCrimson font-semibold tracking-wide">
+                            for Africa, North & South America
+                        </p>
+                        <p class="text-[11px] text-gray-500 font-sans hidden sm:block">
+                            Quaid-i-Azam University • Federal HEC Funded Institution
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-1 font-medium text-xs font-serifHeading text-oxford-800 tracking-wide">
+                    <a href="#home" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">Home</a>
+                    <a href="#director" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">Director's Welcome</a>
+                    <a href="#academics" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors text-royalCrimson font-bold relative">
+                        Academic Degrees
+                        <span class="absolute -top-1 -right-1 bg-royalCrimson text-white text-[9px] px-1 rounded-full font-sans font-bold">BS NEW</span>
+                    </a>
+                    <a href="#faculty" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">Faculty & Fellows</a>
+                    <a href="#wings" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">Research Wings</a>
+                    <a href="#publications" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">Publications</a>
+                    <a href="#news" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors">News & Events</a>
+                    <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/50 rounded font-serifHeading text-xs uppercase tracking-wider shadow transition-all">Contact Desk</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="xl:hidden p-2 rounded text-oxford-800 hover:text-royalCrimson focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-cream border-t border-gray-300 px-4 pt-3 pb-6 space-y-2">
+            <a href="#home" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Home</a>
+            <a href="#director" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Director's Welcome</a>
+            <a href="#academics" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-royalCrimson hover:bg-white flex justify-between items-center">
+                <span>Academic Programs</span>
+                <span class="bg-royalCrimson text-white text-[10px] px-2 py-0.5 rounded font-sans font-bold">BS Launched!</span>
+            </a>
+            <a href="#faculty" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Faculty & Academic Fellows</a>
+            <a href="#wings" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Research Wings</a>
+            <a href="#publications" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Publications & PAJAS Journal</a>
+            <a href="#news" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">News & Events</a>
+            <a href="#contact" class="block px-3 py-2 rounded text-sm font-serifHeading bg-oxford-800 text-royalGold text-center font-bold">Contact Centre</a>
+        </div>
+    </header>
+
+    <!-- Urgent BS Admission Announcement Ticker Bar -->
+    <div class="bg-royalCrimson text-white py-2 px-4 shadow-inner border-b border-royalGold/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-sans">
+            <div class="flex items-center gap-2">
+                <span class="bg-royalGold text-oxford-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded font-sans tracking-wider">New Academic Launch</span>
+                <span class="font-medium">Admissions Open: <strong>BS Area Studies / International Regional Studies</strong> commencing this semester!</span>
+            </div>
+            <a href="#academics" class="text-royalGold hover:underline font-bold flex items-center gap-1 text-xs">
+                View BS Curriculum & Apply <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-oxford-pattern text-white relative py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b-4 border-royalGold">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-oxford-900/90 border border-royalGold/60 text-royalGold text-xs sm:text-sm font-serifHeading uppercase tracking-widest backdrop-blur-sm shadow-md">
+                <i class="fa-solid fa-building-columns"></i> Premier Federal Centre of Excellence
+            </div>
+            
+            <h1 class="font-serifHeading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight drop-shadow-md">
+                Area Study Centre for Africa, North & South America
+            </h1>
+            
+            <p class="font-serifBody text-lg sm:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed italic font-light">
+                Advancing Interdisciplinary Research, Geopolitical Analysis, and Strategic Regional Studies Across Three Continents
+            </p>
+            
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#academics" class="px-6 py-3.5 bg-royalCrimson hover:bg-red-900 border border-royalGold/50 text-white font-serifHeading font-bold rounded shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 badge-pulse">
+                    <i class="fa-solid fa-graduation-cap mr-2"></i> BS Degree Program (New)
+                </a>
+                <a href="#director" class="px-6 py-3.5 bg-royalGold hover:bg-royalGold-dark text-oxford-900 font-serifHeading font-bold rounded shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                    Director's Welcome
+                </a>
+                <a href="#faculty" class="px-6 py-3.5 bg-oxford-800/80 hover:bg-oxford-800 border border-white/40 text-white font-serifHeading font-semibold rounded transition-all duration-200">
+                    Faculty Directory
+                </a>
+            </div>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="mt-16 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="bg-oxford-900/90 backdrop-blur border border-royalGold/30 p-5 rounded-lg shadow-xl">
+                <div class="font-serifHeading text-2xl sm:text-3xl font-bold text-royalGold">Act XLV</div>
+                <div class="text-[11px] text-gray-300 mt-1 uppercase tracking-wider font-sans">Statutory Charter 1975</div>
+            </div>
+            <div class="bg-oxford-900/90 backdrop-blur border border-royalGold/30 p-5 rounded-lg shadow-xl">
+                <div class="font-serifHeading text-2xl sm:text-3xl font-bold text-royalGold">BS / MPhil / PhD</div>
+                <div class="text-[11px] text-gray-300 mt-1 uppercase tracking-wider font-sans">Full Degree Pathways</div>
+            </div>
+            <div class="bg-oxford-900/90 backdrop-blur border border-royalGold/30 p-5 rounded-lg shadow-xl">
+                <div class="font-serifHeading text-2xl sm:text-3xl font-bold text-royalGold">Federal HEC</div>
+                <div class="text-[11px] text-gray-300 mt-1 uppercase tracking-wider font-sans">Ministry Funded</div>
+            </div>
+            <div class="bg-oxford-900/90 backdrop-blur border border-royalGold/30 p-5 rounded-lg shadow-xl">
+                <div class="font-serifHeading text-2xl sm:text-3xl font-bold text-royalGold">QAU Campus</div>
+                <div class="text-[11px] text-gray-300 mt-1 uppercase tracking-wider font-sans">Social Sciences Faculty</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURED ACADEMIC PROGRAMS SECTION (WITH BS LAUNCH HIGHLIGHT) -->
+    <section id="academics" class="py-16 lg:py-24 bg-white border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Academic Excellence & Admissions</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">Degree Programs</h2>
+                <p class="font-serifBody text-gray-600 text-lg">Offering comprehensive academic pathways from undergraduate degree programs to doctoral research levels.</p>
+                <div class="w-24 h-1 bg-royalGold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Program Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- CARD 1: BS DEGREE PROGRAM (NEWLY LAUNCHED) -->
+                <div class="bg-parchment rounded-xl border-2 border-royalCrimson shadow-xl overflow-hidden flex flex-col justify-between relative transform lg:-translate-y-2 transition-transform">
+                    <!-- Ribbon Banner -->
+                    <div class="bg-royalCrimson text-white py-2 px-4 text-center font-serifHeading text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-star text-royalGold"></i> Newly Launched This Semester <i class="fa-solid fa-star text-royalGold"></i>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-block px-3 py-1 bg-oxford-800 text-royalGold font-serifHeading text-xs font-bold rounded border border-royalGold/30">
+                                4-Year BS Program (8 Semesters)
+                            </span>
+                            <span class="text-xs font-bold text-royalCrimson font-sans bg-red-100 px-2 py-1 rounded">
+                                Admissions Open
+                            </span>
+                        </div>
+
+                        <h3 class="font-serifHeading text-2xl font-bold text-oxford-800 mb-2">
+                            BS Area Studies
+                        </h3>
+                        <p class="text-xs text-royalCrimson font-bold font-serifBody italic mb-4">
+                            Specializations: African Studies | North American Studies | Latin American Studies
+                        </p>
+
+                        <p class="font-serifBody text-gray-700 text-base mb-6 leading-relaxed">
+                            Starting from this current semester, the Area Study Centre introduces its premier 4-Year Bachelor of Science (BS) degree. Designed to provide undergraduate students with foundational expertise in diplomatic history, regional political economy, foreign policy, and comparative institutions across Africa and the Americas.
+                        </p>
+
+                        <div class="space-y-2.5 text-xs font-sans text-gray-700 mb-6 bg-white p-4 rounded border border-gray-200">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>Eligibility:</strong> HSSC / FA / FSc / A-Levels (min. 50% marks)</div>
+                            <div><i class="fa-solid fa-book-open text-royalGold mr-2"></i> <strong>Credit Hours:</strong> 130+ Total Credits + Final Year Internship / Research Project</div>
+                            <div><i class="fa-solid fa-calendar-check text-royalGold mr-2"></i> <strong>Commencing:</strong> Current Academic Semester</div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-white border-t border-gray-200 space-y-3">
+                        <button onclick="openInfoModal('BS Area Studies - Course Structure', 'The BS Program covers 8 semesters including Core Social Science Courses, Language Options (Spanish/French/Arabic), Foreign Policy Analysis, Regional Political Economy, and a Mandatory Capstone Internship.')" class="w-full py-3 bg-royalCrimson hover:bg-red-900 text-white font-serifHeading text-xs font-bold rounded shadow transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-lines"></i> View BS Curriculum Details
+                        </button>
+                        <button onclick="openInfoModal('BS Admission Process', 'Apply through the Quaid-i-Azam University Online Admissions Portal. Merit is calculated based on Academic Record and QAU Entry Test scores.')" class="w-full py-2.5 bg-oxford-800 hover:bg-oxford-900 text-royalGold font-serifHeading text-xs font-bold rounded transition-colors text-center">
+                            Admission Criteria & How to Apply
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: MPHIL PROGRAM -->
+                <div class="bg-parchment rounded-xl border border-gray-300 shadow-md overflow-hidden flex flex-col justify-between hover:border-royalGold transition-all">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-block px-3 py-1 bg-oxford-800 text-royalGold font-serifHeading text-xs font-bold rounded border border-royalGold/30">
+                                2-Year MPhil Degree
+                            </span>
+                            <span class="text-xs font-bold text-gray-500 font-sans">
+                                Postgraduate
+                            </span>
+                        </div>
+
+                        <h3 class="font-serifHeading text-2xl font-bold text-oxford-800 mb-2">
+                            MPhil in Area Studies
+                        </h3>
+                        <p class="text-xs text-royalCrimson font-bold font-serifBody italic mb-4">
+                            Advanced Interdisciplinary Research Degree
+                        </p>
+
+                        <p class="font-serifBody text-gray-700 text-base mb-6 leading-relaxed">
+                            A rigorous 2-year postgraduate program tailored for scholars seeking advanced analytical methodologies in international relations, strategic doctrines, foreign policy formulation, and trans-continental socio-economic developments.
+                        </p>
+
+                        <div class="space-y-2.5 text-xs font-sans text-gray-700 mb-6 bg-white p-4 rounded border border-gray-200">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>Eligibility:</strong> BS / MA / MSc (16 years education) in Social Sciences (min. 2.5 CGPA)</div>
+                            <div><i class="fa-solid fa-clock text-royalGold mr-2"></i> <strong>Structure:</strong> 2 Semesters Coursework + Independent Research Dissertation</div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-white border-t border-gray-200">
+                        <button onclick="openInfoModal('MPhil Admissions & Coursework', 'MPhil candidates complete 24 credit hours of coursework followed by a peer-reviewed research dissertation under senior ASC faculty supervision.')" class="w-full py-3 bg-oxford-800 hover:bg-oxford-900 text-royalGold font-serifHeading text-xs font-bold rounded transition-colors">
+                            MPhil Program Requirements
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3: PHD PROGRAM -->
+                <div class="bg-parchment rounded-xl border border-gray-300 shadow-md overflow-hidden flex flex-col justify-between hover:border-royalGold transition-all">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-block px-3 py-1 bg-royalCrimson text-white font-serifHeading text-xs font-bold rounded">
+                                Doctoral Program
+                            </span>
+                            <span class="text-xs font-bold text-gray-500 font-sans">
+                                PhD Research
+                            </span>
+                        </div>
+
+                        <h3 class="font-serifHeading text-2xl font-bold text-oxford-800 mb-2">
+                            PhD in Area Studies
+                        </h3>
+                        <p class="text-xs text-royalCrimson font-bold font-serifBody italic mb-4">
+                            Doctoral Research Fellowship
+                        </p>
+
+                        <p class="font-serifBody text-gray-700 text-base mb-6 leading-relaxed">
+                            The terminal research degree producing top-tier academics, policy consultants, and strategic analysts. Focuses on original archival exploration, theoretical frameworks, and high-impact publications in international affairs.
+                        </p>
+
+                        <div class="space-y-2.5 text-xs font-sans text-gray-700 mb-6 bg-white p-4 rounded border border-gray-200">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>Eligibility:</strong> MPhil / MS degree (18 years education, min. 3.0 CGPA) + Subject Test</div>
+                            <div><i class="fa-solid fa-clock text-royalGold mr-2"></i> <strong>Requirements:</strong> Comprehensive Exam + International Publication + Dissertation Defence</div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-white border-t border-gray-200">
+                        <button onclick="openInfoModal('PhD Doctoral Guidelines', 'PhD scholars work under designated supervisors across the African, North American, or South American research wings. HEC quality criteria strictly enforced.')" class="w-full py-3 bg-oxford-800 hover:bg-oxford-900 text-royalGold font-serifHeading text-xs font-bold rounded transition-colors">
+                            Doctoral Guidelines
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Message Section -->
+    <section id="director" class="py-16 lg:py-24 bg-cream border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 gold-border-box">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Director Photo & Academic Credentials Sidebar -->
+                    <div class="lg:col-span-5 bg-oxford-900 p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                        <div class="relative z-10 text-center lg:text-left">
+                            <div class="inline-block px-3 py-1 bg-royalGold/20 border border-royalGold text-royalGold rounded text-xs font-serifHeading uppercase tracking-widest mb-6">
+                                Director's Address
+                            </div>
+                            
+                            <!-- Profile Avatar Frame -->
+                            <div class="relative mx-auto lg:mx-0 w-48 h-56 sm:w-56 sm:h-64 rounded-md overflow-hidden border-2 border-royalGold shadow-2xl mb-6 bg-oxford-800">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
+                                     alt="Prof. Dr. Director" 
+                                     class="w-full h-full object-cover object-top"
+                                     onerror="this.src='https://placehold.co/400x500/002147/D4AF37?text=Prof.+Dr.+Director'">
+                            </div>
+
+                            <h3 class="font-serifHeading text-2xl font-bold text-white tracking-wide">
+                                Prof. Dr. Saima A. Khan
+                            </h3>
+                            <p class="text-royalGold font-serifBody text-base italic mt-1">
+                                Director & Professor of International Relations
+                            </p>
+                            <p class="text-xs text-gray-300 mt-2 font-sans leading-relaxed">
+                                Ph.D. (University of Oxford, UK) | M.Phil (QAU)<br>
+                                Member, Academic Council & Senate | Quaid-i-Azam University
+                            </p>
+
+                            <div class="mt-6 pt-6 border-t border-white/20 text-xs text-gray-300 font-sans space-y-1.5">
+                                <div><i class="fa-solid fa-envelope text-royalGold mr-2"></i> director@asc.qau.edu.pk</div>
+                                <div><i class="fa-solid fa-phone text-royalGold mr-2"></i> +92 (51) 9064-3151</div>
+                            </div>
+                        </div>
+
+                        <i class="fa-solid fa-quote-right absolute bottom-4 right-4 text-white/5 text-9xl pointer-events-none"></i>
+                    </div>
+
+                    <!-- Message Body -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 lg:p-14 flex flex-col justify-center bg-white">
+                        <div class="flex items-center gap-2 text-royalCrimson font-serifHeading font-bold text-xs tracking-widest uppercase mb-2">
+                            <span class="w-8 h-0.5 bg-royalCrimson"></span> Executive Welcome Note
+                        </div>
+                        <h2 class="font-serifHeading text-2xl sm:text-3xl lg:text-4xl font-bold text-oxford-800 mb-6 leading-tight">
+                            Welcome to the Area Study Centre
+                        </h2>
+
+                        <div class="font-serifBody text-gray-800 text-base sm:text-lg leading-relaxed space-y-4">
+                            <p class="first-letter:text-5xl first-letter:font-serifHeading first-letter:font-bold first-letter:text-oxford-800 first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+                                As an autonomous statutory institution established under the <strong>1975 Area Study Centres Act No. XLV</strong>, our Centre serves as Pakistan’s premier academic seat dedicated to interdisciplinary research across Africa, North America, and South America.
+                            </p>
+                            <p>
+                                Affiliated academically with the Faculty of Social Sciences at Quaid-i-Azam University and funded directly by the Federal Ministry of Education through the Higher Education Commission (HEC), our institution provides a vital bridge between rigorous academic scholarship and diplomatic foreign policy formulation.
+                            </p>
+                            <p>
+                                We are particularly proud to launch our flagship <strong>4-Year BS Degree in Area Studies starting from this semester</strong>. This milestone expands our academic horizon beyond postgraduate MPhil and PhD degrees, nurturing undergraduate scholars with early specialization in global regional dynamics.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200 flex items-center justify-between">
+                            <div>
+                                <p class="font-serifHeading font-bold text-oxford-800">Prof. Dr. Saima A. Khan</p>
+                                <p class="text-xs text-gray-500 font-sans">Director & Chair of Academic Board</p>
+                            </div>
+                            <div class="font-serifHeading text-lg italic text-ochre font-bold">
+                                Area Study Centre, QAU
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty & Research Fellows Directory -->
+    <section id="faculty" class="py-16 lg:py-24 bg-white border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Academic Leadership</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">Faculty & Research Fellows</h2>
+                <p class="font-serifBody text-gray-600 text-lg">Our distinguished professors, researchers, and visiting fellows leading research and teaching across our BS, MPhil, and PhD programs.</p>
+                <div class="w-24 h-1 bg-royalGold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 border-b border-gray-200 pb-4">
+                <button onclick="filterFaculty('all')" id="btn-faculty-all" class="faculty-filter-btn active px-4 py-2 text-xs font-serifHeading font-bold rounded-md bg-oxford-800 text-royalGold border border-oxford-800 shadow transition-all">
+                    All Faculty & Fellows
+                </button>
+                <button onclick="filterFaculty('north-america')" id="btn-faculty-north-america" class="faculty-filter-btn px-4 py-2 text-xs font-serifHeading font-bold rounded-md bg-parchment text-oxford-800 border border-gray-300 hover:border-oxford-800 transition-all">
+                    North American Studies
+                </button>
+                <button onclick="filterFaculty('africa')" id="btn-faculty-africa" class="faculty-filter-btn px-4 py-2 text-xs font-serifHeading font-bold rounded-md bg-parchment text-oxford-800 border border-gray-300 hover:border-oxford-800 transition-all">
+                    African Studies
+                </button>
+                <button onclick="filterFaculty('south-america')" id="btn-faculty-south-america" class="faculty-filter-btn px-4 py-2 text-xs font-serifHeading font-bold rounded-md bg-parchment text-oxford-800 border border-gray-300 hover:border-oxford-800 transition-all">
+                    South/Latin America
+                </button>
+            </div>
+
+            <!-- Faculty Grid -->
+            <div id="faculty-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Faculty 1 -->
+                <div class="faculty-card north-america bg-parchment rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" 
+                                 alt="Prof. Dr. Saima A. Khan" 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-royalGold shadow">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-wider font-bold bg-oxford-800 text-royalGold px-2 py-0.5 rounded font-sans">Centre Director</span>
+                                <h3 class="font-serifHeading text-lg font-bold text-oxford-800 mt-1">Prof. Dr. Saima A. Khan</h3>
+                                <p class="text-xs text-royalCrimson font-serifBody font-bold">Professor of International Relations</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-xs font-sans text-gray-700">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>PhD:</strong> University of Oxford, UK</div>
+                            <div><i class="fa-solid fa-book-bookmark text-royalGold mr-2"></i> <strong>Focus:</strong> US Foreign Policy & Grand Strategy</div>
+                            <div><i class="fa-solid fa-envelope text-royalGold mr-2"></i> saima.khan@asc.qau.edu.pk</div>
+                        </div>
+                        <p class="font-serifBody text-gray-600 text-sm mt-4 line-clamp-3">
+                            Senior academic specializing in US strategic doctrines, South Asian bilateral ties, and transatlantic security. Teaches BS and Doctoral seminars.
+                        </p>
+                    </div>
+                    <div class="bg-white p-4 border-t border-gray-200 flex justify-between items-center">
+                        <span class="text-[11px] text-gray-500 font-sans">North American Wing</span>
+                        <button onclick="openFacultyModal(0)" class="text-xs font-serifHeading font-bold text-royalCrimson hover:underline flex items-center gap-1">
+                            Bio & Publications <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Faculty 2 -->
+                <div class="faculty-card africa bg-parchment rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" 
+                                 alt="Dr. Tariq Mahmood" 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-royalGold shadow">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-wider font-bold bg-royalCrimson text-white px-2 py-0.5 rounded font-sans">Associate Professor</span>
+                                <h3 class="font-serifHeading text-lg font-bold text-oxford-800 mt-1">Dr. Tariq Mahmood</h3>
+                                <p class="text-xs text-royalCrimson font-serifBody font-bold">Head of African Studies Wing</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-xs font-sans text-gray-700">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>PhD:</strong> SOAS University of London, UK</div>
+                            <div><i class="fa-solid fa-book-bookmark text-royalGold mr-2"></i> <strong>Focus:</strong> African Union Governance & AfCFTA Trade</div>
+                            <div><i class="fa-solid fa-envelope text-royalGold mr-2"></i> t.mahmood@asc.qau.edu.pk</div>
+                        </div>
+                        <p class="font-serifBody text-gray-600 text-sm mt-4 line-clamp-3">
+                            Expert on maritime security along the Horn of Africa, post-colonial political economy, and Pakistan's 'Look Africa' diplomatic initiative.
+                        </p>
+                    </div>
+                    <div class="bg-white p-4 border-t border-gray-200 flex justify-between items-center">
+                        <span class="text-[11px] text-gray-500 font-sans">African Studies Wing</span>
+                        <button onclick="openFacultyModal(1)" class="text-xs font-serifHeading font-bold text-royalCrimson hover:underline flex items-center gap-1">
+                            Bio & Publications <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Faculty 3 -->
+                <div class="faculty-card south-america bg-parchment rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" 
+                                 alt="Dr. Elena Ramos-Sharif" 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-royalGold shadow">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-wider font-bold bg-oxford-800 text-royalGold px-2 py-0.5 rounded font-sans">Assistant Professor</span>
+                                <h3 class="font-serifHeading text-lg font-bold text-oxford-800 mt-1">Dr. Elena Ramos-Sharif</h3>
+                                <p class="text-xs text-royalCrimson font-serifBody font-bold">Latin American Geopolitics</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-xs font-sans text-gray-700">
+                            <div><i class="fa-solid fa-graduation-cap text-royalGold mr-2"></i> <strong>PhD:</strong> Georgetown University, USA</div>
+                            <div><i class="fa-solid fa-book-bookmark text-royalGold mr-2"></i> <strong>Focus:</strong> MERCOSUR Economics & BRICS Multipolarity</div>
+                            <div><i class="fa-solid fa-envelope text-royalGold mr-2"></i> elena.ramos@asc.qau.edu.pk</div>
+                        </div>
+                        <p class="font-serifBody text-gray-600 text-sm mt-4 line-clamp-3">
+                            Specialist in Latin American economic integration, Andean regional security, and trade alliances across South America.
+                        </p>
+                    </div>
+                    <div class="bg-white p-4 border-t border-gray-200 flex justify-between items-center">
+                        <span class="text-[11px] text-gray-500 font-sans">South American Wing</span>
+                        <button onclick="openFacultyModal(2)" class="text-xs font-serifHeading font-bold text-royalCrimson hover:underline flex items-center gap-1">
+                            Bio & Publications <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Statutory Background & Governance -->
+    <section id="statutory" class="py-16 lg:py-24 bg-parchment border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Legal & Governance Charter</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">Statutory Framework</h2>
+                <div class="w-24 h-1 bg-royalGold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg border-t-4 border-oxford-800 shadow-sm">
+                    <div class="w-12 h-12 bg-oxford-800 text-royalGold rounded-full flex items-center justify-center text-xl mb-6 shadow">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-3">Act No. XLV of 1975</h3>
+                    <p class="font-serifBody text-gray-700 text-base leading-relaxed">
+                        Created under parliamentary statute by the Government of Pakistan to foster high-level specialized research in foreign regional studies.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg border-t-4 border-royalGold shadow-sm">
+                    <div class="w-12 h-12 bg-royalGold text-oxford-900 rounded-full flex items-center justify-center text-xl mb-6 shadow">
+                        <i class="fa-solid fa-landmark-dome"></i>
+                    </div>
+                    <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-3">Federal HEC Funding</h3>
+                    <p class="font-serifBody text-gray-700 text-base leading-relaxed">
+                        Functions as an autonomous institute funded directly through the Higher Education Commission (HEC) and Federal Ministry of Education.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg border-t-4 border-royalCrimson shadow-sm">
+                    <div class="w-12 h-12 bg-royalCrimson text-white rounded-full flex items-center justify-center text-xl mb-6 shadow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-3">QAU Affiliation</h3>
+                    <p class="font-serifBody text-gray-700 text-base leading-relaxed">
+                        Academically tied to the Faculty of Social Sciences at Quaid-i-Azam University, granting accredited BS, MPhil, and PhD degrees.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Regional Research Wings -->
+    <section id="wings" class="py-16 lg:py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Regional Divisions</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">Research Wings</h2>
+                <div class="w-24 h-1 bg-royalGold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Wing 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 group hover:border-royalGold transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=800&auto=format&fit=crop" 
+                             alt="African Studies" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-oxford-900/40"></div>
+                        <span class="absolute top-4 left-4 bg-oxford-800 text-royalGold font-serifHeading text-xs px-3 py-1 rounded shadow">
+                            Division I
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-2">African Studies Wing</h3>
+                        <p class="font-serifBody text-gray-700 text-base mb-4 leading-relaxed">
+                            Researches the African Union (AU), Sub-Saharan economic growth, AfCFTA trade implications, and Pakistan's 'Look Africa' diplomatic vision.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Wing 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 group hover:border-royalGold transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1501469537001-510991731103?q=80&w=800&auto=format&fit=crop" 
+                             alt="North American Studies" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-oxford-900/40"></div>
+                        <span class="absolute top-4 left-4 bg-oxford-800 text-royalGold font-serifHeading text-xs px-3 py-1 rounded shadow">
+                            Division II
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-2">North American Studies Wing</h3>
+                        <p class="font-serifBody text-gray-700 text-base mb-4 leading-relaxed">
+                            Analyzes US Foreign Policy doctrines, US-Pakistan strategic dialogues, Canadian diplomacy, and North American trade blocs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Wing 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 group hover:border-royalGold transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1589519160732-57fc498494f8?q=80&w=800&auto=format&fit=crop" 
+                             alt="South American Studies" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-oxford-900/40"></div>
+                        <span class="absolute top-4 left-4 bg-oxford-800 text-royalGold font-serifHeading text-xs px-3 py-1 rounded shadow">
+                            Division III
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-2">South & Latin American Wing</h3>
+                        <p class="font-serifBody text-gray-700 text-base mb-4 leading-relaxed">
+                            Focuses on Latin American geopolitics, MERCOSUR trade integration, South-South cooperation, and emerging global multipolarity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Publications & PAJAS Journal -->
+    <section id="publications" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Scholarly Output</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">Publications & Journals</h2>
+                <div class="w-24 h-1 bg-royalGold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-parchment p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="text-xs font-bold text-royalGold-dark uppercase font-sans">HEC Recognized Peer-Reviewed Journal</span>
+                    <h3 class="font-serifHeading text-2xl font-bold text-oxford-800 mt-2 mb-2">Pakistan Journal of American Studies (PAJAS)</h3>
+                    <p class="text-xs text-gray-500 font-sans mb-4">ISSN: 1018-0966 | Bi-Annual Flagship Journal</p>
+                    <p class="font-serifBody text-gray-700 text-base leading-relaxed mb-6">
+                        PAJAS is Pakistan's premier bi-annual refereed academic journal publishing cutting-edge research on North and South American foreign policy, strategic relations, security doctrines, and historical political developments.
+                    </p>
+                    <button onclick="openInfoModal('PAJAS Journal Submissions', 'Submit research manuscripts to editor.pajas@asc.qau.edu.pk adhering to Chicago Manual of Style. All articles undergo double-blind peer review.')" class="px-5 py-2.5 bg-oxford-800 text-royalGold font-serifHeading text-xs font-bold rounded hover:bg-oxford-900 transition-colors">
+                        Author Submission Guidelines
+                    </button>
+                </div>
+
+                <div class="bg-parchment p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-royalCrimson uppercase font-sans">Monographs & Policy Papers</span>
+                        <h3 class="font-serifHeading text-2xl font-bold text-oxford-800 mt-2 mb-2">Specialized Research Publications</h3>
+                        <p class="font-serifBody text-gray-700 text-base leading-relaxed mb-4">
+                            The Centre publishes independent research monographs, strategic policy briefs, and conference proceedings providing diplomatic recommendations to the Ministry of Foreign Affairs.
+                        </p>
+                    </div>
+                    <button onclick="openInfoModal('Monograph Archives', 'Hardcopy monographs and policy briefs are accessible at the Area Study Centre Library, QAU Islamabad.')" class="px-5 py-2.5 bg-royalCrimson text-white font-serifHeading text-xs font-bold rounded hover:bg-red-900 transition-colors self-start">
+                        Browse Monograph Catalogue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section id="news" class="py-16 lg:py-24 bg-cream border-t border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Campus Updates</p>
+                <h2 class="font-serifHeading text-3xl sm:text-4xl font-bold text-oxford-800 mb-4">News & Academic Events</h2>
+                <div class="w-24 h-1 bg-royalGold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <span class="text-[10px] font-bold uppercase bg-royalCrimson text-white px-2 py-0.5 rounded font-sans">Academic Announcement</span>
+                    <h4 class="font-serifHeading text-lg font-bold text-oxford-800 mt-3 mb-2">BS Area Studies Commences This Semester</h4>
+                    <p class="font-serifBody text-gray-600 text-sm mb-4">Orientation session for the inaugural batch of 4-Year BS degree students scheduled for the opening week of the semester.</p>
+                    <span class="text-xs font-sans text-gray-400"><i class="fa-solid fa-calendar mr-1"></i> Current Semester</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <span class="text-[10px] font-bold uppercase bg-oxford-800 text-royalGold px-2 py-0.5 rounded font-sans">International Conference</span>
+                    <h4 class="font-serifHeading text-lg font-bold text-oxford-800 mt-3 mb-2">Transatlantic Relations & South Asian Security</h4>
+                    <p class="font-serifBody text-gray-600 text-sm mb-4">International symposium hosting envoys, foreign diplomats, and senior scholars at Quaid-i-Azam University campus.</p>
+                    <span class="text-xs font-sans text-gray-400"><i class="fa-solid fa-calendar mr-1"></i> Upcoming</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <span class="text-[10px] font-bold uppercase bg-royalGold text-oxford-900 px-2 py-0.5 rounded font-sans">PAJAS Release</span>
+                    <h4 class="font-serifHeading text-lg font-bold text-oxford-800 mt-3 mb-2">PAJAS New Volume Published</h4>
+                    <p class="font-serifBody text-gray-600 text-sm mb-4">Latest bi-annual volume of Pakistan Journal of American Studies officially released by the Editorial Board.</p>
+                    <span class="text-xs font-sans text-gray-400"><i class="fa-solid fa-calendar mr-1"></i> Latest Issue</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-parchment">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <p class="text-royalCrimson font-serifHeading text-xs uppercase tracking-widest font-bold mb-2">Contact Desk</p>
+                        <h2 class="font-serifHeading text-3xl font-bold text-oxford-800 mb-4">Reach the Centre</h2>
+                        <div class="w-16 h-1 bg-royalGold"></div>
+                    </div>
+
+                    <p class="font-serifBody text-gray-700 text-base leading-relaxed">
+                        For inquiries regarding BS, MPhil, or PhD admissions, journal submissions, or library research permits, please write to our administration.
+                    </p>
+
+                    <div class="space-y-4 font-serifBody text-sm text-gray-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-oxford-800 text-royalGold rounded flex items-center justify-center flex-shrink-0 shadow">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="font-serifHeading font-bold text-oxford-800">Address</p>
+                                <p class="text-xs text-gray-600 font-sans mt-0.5">Area Study Centre for Africa, North & South America<br>Quaid-i-Azam University Campus, Islamabad, 45320, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-oxford-800 text-royalGold rounded flex items-center justify-center flex-shrink-0 shadow">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="font-serifHeading font-bold text-oxford-800">Telephone</p>
+                                <p class="text-xs text-gray-600 font-sans mt-0.5">+92 (51) 9064-3151 / +92 (51) 9248259</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-oxford-800 text-royalGold rounded flex items-center justify-center flex-shrink-0 shadow">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="font-serifHeading font-bold text-oxford-800">Email Address</p>
+                                <p class="text-xs text-gray-600 font-sans mt-0.5">info@asc.qau.edu.pk | director@asc.qau.edu.pk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="font-serifHeading text-xl font-bold text-oxford-800 mb-6">Send an Inquiry</h3>
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase font-sans mb-1">Full Name *</label>
+                                <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-oxford-800">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase font-sans mb-1">Email Address *</label>
+                                <input type="email" required class="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-oxford-800">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase font-sans mb-1">Inquiry Topic *</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-oxford-800">
+                                <option>NEW: BS Area Studies Admissions</option>
+                                <option>MPhil / PhD Degree Admissions</option>
+                                <option>PAJAS Journal Manuscript Inquiry</option>
+                                <option>Faculty & Research Collaboration</option>
+                                <option>ASC Library Access Permit</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase font-sans mb-1">Message *</label>
+                            <textarea rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-oxford-800"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-oxford-800 hover:bg-oxford-900 text-royalGold font-serifHeading font-bold text-xs uppercase tracking-wider rounded shadow transition-colors">
+                            Submit Inquiry
+                        </button>
+                    </form>
+
+                    <div id="form-response" class="hidden mt-4 p-4 rounded text-sm font-sans"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-oxford-900 text-gray-300 border-t-4 border-royalGold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-oxford-800 border border-royalGold flex items-center justify-center text-royalGold text-lg font-serifHeading font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serifHeading font-bold text-white text-base">Area Study Centre</h4>
+                            <p class="text-xs text-royalGold">Africa, North & South America</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 font-serifBody leading-relaxed max-w-md">
+                        Statutory Centre of Excellence established under Act XLV of 1975. Funded by the Federal Ministry of Education through the Higher Education Commission (HEC) and affiliated with Quaid-i-Azam University, Islamabad.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-serifHeading font-bold text-royalGold text-xs uppercase tracking-widest mb-4">Degrees</h5>
+                    <ul class="space-y-2 text-xs font-sans">
+                        <li><a href="#academics" class="text-white font-bold hover:underline">BS Area Studies (NEW)</a></li>
+                        <li><a href="#academics" class="hover:text-white transition-colors">MPhil Degree</a></li>
+                        <li><a href="#academics" class="hover:text-white transition-colors">PhD Doctoral Degree</a></li>
+                        <li><a href="#faculty" class="hover:text-white transition-colors">Faculty Directory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-serifHeading font-bold text-royalGold text-xs uppercase tracking-widest mb-4">Research Wings</h5>
+                    <ul class="space-y-2 text-xs font-sans">
+                        <li><a href="#wings" class="hover:text-white transition-colors">African Studies Division</a></li>
+                        <li><a href="#wings" class="hover:text-white transition-colors">North American Division</a></li>
+                        <li><a href="#wings" class="hover:text-white transition-colors">South American Division</a></li>
+                        <li><a href="#publications" class="hover:text-white transition-colors">PAJAS Journal Repository</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-xs text-gray-500 font-sans flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; Area Study Centre for Africa, North & South America. Statutory Body under Act No. XLV of 1975.</p>
+                <p>Faculty of Social Sciences, Quaid-i-Azam University, Islamabad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FACULTY PROFILE MODAL -->
+    <div id="faculty-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border-t-4 border-oxford-800 relative">
+            <button onclick="closeFacultyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold">
+                &times;
+            </button>
+            
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+                <img id="modal-fac-img" src="" alt="Faculty Profile" class="w-28 h-28 rounded-full object-cover border-2 border-royalGold shadow-md">
+                <div class="text-center sm:text-left space-y-1">
+                    <span id="modal-fac-badge" class="text-[10px] font-bold uppercase tracking-wider bg-oxford-800 text-royalGold px-2 py-0.5 rounded font-sans"></span>
+                    <h3 id="modal-fac-name" class="font-serifHeading text-2xl font-bold text-oxford-800"></h3>
+                    <p id="modal-fac-title" class="text-sm font-serifBody text-royalCrimson font-bold"></p>
+                    <p id="modal-fac-edu" class="text-xs text-gray-600 font-sans mt-1"><i class="fa-solid fa-graduation-cap text-royalGold mr-1"></i> <span id="modal-fac-edu-text"></span></p>
+                    <p id="modal-fac-email" class="text-xs text-gray-600 font-sans"><i class="fa-solid fa-envelope text-royalGold mr-1"></i> <span id="modal-fac-email-text"></span></p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-serifHeading font-bold text-oxford-800 text-base mb-2 border-b border-gray-100 pb-1">Academic Biography</h4>
+                    <p id="modal-fac-bio" class="font-serifBody text-gray-700 text-base leading-relaxed"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-serifHeading font-bold text-oxford-800 text-base mb-2 border-b border-gray-100 pb-1">Teaching & Research Focus</h4>
+                    <ul id="modal-fac-focus" class="list-disc list-inside font-serifBody text-gray-700 text-sm space-y-1"></ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-gray-200 text-right">
+                <button onclick="closeFacultyModal()" class="px-5 py-2 bg-oxford-800 text-royalGold font-serifHeading text-xs font-bold rounded hover:bg-oxford-900 transition-colors">
+                    Close Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERAL INFO MODAL -->
+    <div id="info-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-lg w-full p-6 shadow-2xl border-t-4 border-oxford-800 relative">
+            <button onclick="closeInfoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold">
+                &times;
+            </button>
+            <h3 id="modal-title" class="font-serifHeading text-xl font-bold text-oxford-800 mb-3"></h3>
+            <p id="modal-content" class="font-serifBody text-base text-gray-700 leading-relaxed mb-6"></p>
+            <div class="text-right">
+                <button onclick="closeInfoModal()" class="px-4 py-2 bg-oxford-800 text-royalGold font-serifHeading text-xs font-bold rounded hover:bg-oxford-900 transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // Faculty Dataset
+        const facultyData = [
+            {
+                name: "Prof. Dr. Saima A. Khan",
+                title: "Centre Director & Professor of International Relations",
+                badge: "Centre Director",
+                img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
+                edu: "PhD in International Relations (University of Oxford, UK)",
+                email: "saima.khan@asc.qau.edu.pk",
+                bio: "Prof. Dr. Saima A. Khan leads the Area Study Centre. Her scholarship focuses on North American grand strategy, US bilateral policies in South Asia, and regional multilateral institutions. She oversees the BS Area Studies program launch.",
+                focus: [
+                    "US Foreign Policy & Grand Strategy",
+                    "BS Core Seminar: Introduction to Area Studies",
+                    "Transatlantic Security Frameworks",
+                    "US-Pakistan Strategic Bilateral Dialogue"
+                ]
+            },
+            {
+                name: "Dr. Tariq Mahmood",
+                title: "Associate Professor & Head of African Studies Division",
+                badge: "Associate Professor",
+                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+                edu: "PhD in African Studies (SOAS University of London, UK)",
+                email: "t.mahmood@asc.qau.edu.pk",
+                bio: "Dr. Tariq Mahmood leads the African Studies Division at ASC. His research investigates the political economy of Sub-Saharan Africa, AfCFTA trade corridors, and Pakistan's 'Look Africa' trade policies.",
+                focus: [
+                    "African Union (AU) Peace & Security Architecture",
+                    "BS Seminar: African Political Economy",
+                    "Sub-Saharan Trade Corridors",
+                    "Afro-Asian Economic Alliances"
+                ]
+            },
+            {
+                name: "Dr. Elena Ramos-Sharif",
+                title: "Assistant Professor & Head of South American Studies",
+                badge: "Assistant Professor",
+                img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+                edu: "PhD in Latin American Geopolitics (Georgetown University, USA)",
+                email: "elena.ramos@asc.qau.edu.pk",
+                bio: "Dr. Elena Ramos-Sharif specializes in Latin American regionalism, MERCOSUR economic integration, and emerging South-South multilateral coalitions.",
+                focus: [
+                    "MERCOSUR & Andean Trade Blocs",
+                    "BRICS Expansion in Latin America",
+                    "BS Course: Latin American History & Politics",
+                    "Energy Diplomacy in South America"
+                ]
+            }
+        ];
+
+        // Mobile Nav Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Faculty Filtering
+        function filterFaculty(category) {
+            const cards = document.querySelectorAll('.faculty-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+
+            const buttons = document.querySelectorAll('.faculty-filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-oxford-800', 'text-royalGold');
+                btn.classList.add('bg-parchment', 'text-oxford-800');
+            });
+
+            const activeBtn = document.getElementById('btn-faculty-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-parchment', 'text-oxford-800');
+                activeBtn.classList.add('bg-oxford-800', 'text-royalGold');
+            }
+        }
+
+        // Open Faculty Modal
+        function openFacultyModal(index) {
+            const data = facultyData[index];
+            if (!data) return;
+
+            document.getElementById('modal-fac-img').src = data.img;
+            document.getElementById('modal-fac-badge').innerText = data.badge;
+            document.getElementById('modal-fac-name').innerText = data.name;
+            document.getElementById('modal-fac-title').innerText = data.title;
+            document.getElementById('modal-fac-edu-text').innerText = data.edu;
+            document.getElementById('modal-fac-email-text').innerText = data.email;
+            document.getElementById('modal-fac-bio').innerText = data.bio;
+
+            const focusList = document.getElementById('modal-fac-focus');
+            focusList.innerHTML = '';
+            data.focus.forEach(item => {
+                const li = document.createElement('li');
+                li.innerText = item;
+                focusList.appendChild(li);
+            });
+
+            document.getElementById('faculty-modal').classList.remove('hidden');
+        }
+
+        function closeFacultyModal() {
+            document.getElementById('faculty-modal').classList.add('hidden');
+        }
+
+        // General Info Modal Logic
+        function openInfoModal(title, text) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-content').innerText = text;
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        function closeInfoModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const resp = document.getElementById('form-response');
+            resp.classList.remove('hidden');
+            resp.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-300');
+            resp.innerHTML = '<strong>Inquiry Sent Successfully:</strong> Your inquiry has been forwarded to the Area Study Centre Secretariat at Quaid-i-Azam University.';
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>
