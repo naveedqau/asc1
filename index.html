@@ -6,10 +6,10 @@
     <title>Area Study Centre for Africa, North & South America | Quaid-i-Azam University</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display, EB Garamond & Inter -->
+    <!-- Google Fonts: Playfair Display, EB Garamond, Inter & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -37,7 +37,8 @@
                     fontFamily: {
                         serifHeading: ['Playfair Display', 'Georgia', 'serif'],
                         serifBody: ['EB Garamond', 'Georgia', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        navFont: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     }
                 }
             }
@@ -99,7 +100,7 @@
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation Bar with Refined Beautiful Font -->
     <header class="bg-white sticky top-0 z-50 shadow-md border-b-4 border-oxford-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-3.5">
@@ -122,16 +123,17 @@
                     </div>
                 </a>
 
-                <!-- Navigation Links -->
-                <nav class="hidden xl:flex items-center space-x-1.5 font-medium text-xs font-serifHeading text-oxford-800 tracking-wide">
-                    <a href="#home" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">Home</a>
-                    <a href="#director" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">Director's Welcome</a>
-                    <a href="#academics" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap font-bold">Academic Degrees</a>
-                    <a href="#faculty" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">Faculty & Fellows</a>
-                    <a href="#wings" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">Research Wings</a>
-                    <a href="#publications" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">Publications</a>
-                    <a href="#news" class="px-3 py-2 rounded hover:bg-cream hover:text-royalCrimson transition-colors whitespace-nowrap">News & Events</a>
-                    <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/50 rounded-md font-serifHeading text-xs uppercase tracking-wider shadow-sm transition-all whitespace-nowrap inline-flex items-center gap-1.5">
+                <!-- Modern Elegant Sans Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-1 font-navFont font-semibold text-[13px] text-oxford-800 tracking-tight">
+                    <a href="#home" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Home</a>
+                    <a href="#director" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Director's Welcome</a>
+                    <a href="#academics" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap text-royalCrimson font-bold">Academic Degrees</a>
+                    <a href="#faculty" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Faculty & Fellows</a>
+                    <a href="#wings" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Research Wings</a>
+                    <a href="#publications" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Publications</a>
+                    <a href="#news" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">News & Events</a>
+                    
+                    <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/40 rounded-md font-bold text-xs uppercase tracking-wider shadow-sm transition-all duration-200 whitespace-nowrap inline-flex items-center gap-1.5">
                         <i class="fa-solid fa-phone text-[10px]"></i> Contact
                     </a>
                 </nav>
@@ -144,15 +146,15 @@
         </div>
 
         <!-- Mobile Drawer Navigation -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-cream border-t border-gray-300 px-4 pt-3 pb-6 space-y-2">
-            <a href="#home" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Home</a>
-            <a href="#director" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Director's Welcome</a>
-            <a href="#academics" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-royalCrimson hover:bg-white">Academic Degrees</a>
-            <a href="#faculty" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Faculty & Academic Fellows</a>
-            <a href="#wings" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Research Wings</a>
-            <a href="#publications" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">Publications & PAJAS Journal</a>
-            <a href="#news" class="block px-3 py-2 rounded text-sm font-serifHeading font-bold text-oxford-800 hover:bg-white">News & Events</a>
-            <a href="#contact" class="block px-3 py-2 rounded text-sm font-serifHeading bg-oxford-800 text-royalGold text-center font-bold uppercase tracking-wider">Contact</a>
+        <div id="mobile-menu" class="hidden xl:hidden bg-cream border-t border-gray-300 px-4 pt-3 pb-6 space-y-2 font-navFont">
+            <a href="#home" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Home</a>
+            <a href="#director" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Director's Welcome</a>
+            <a href="#academics" class="block px-3 py-2 rounded text-sm font-bold text-royalCrimson hover:bg-white">Academic Degrees</a>
+            <a href="#faculty" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Faculty & Academic Fellows</a>
+            <a href="#wings" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Research Wings</a>
+            <a href="#publications" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Publications & PAJAS Journal</a>
+            <a href="#news" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">News & Events</a>
+            <a href="#contact" class="block px-3 py-2 rounded text-sm bg-oxford-800 text-royalGold text-center font-bold uppercase tracking-wider">Contact</a>
         </div>
     </header>
 
@@ -832,7 +834,7 @@
         </div>
     </section>
 
-    <!-- Streamlined Contact Section (Phone Numbers & Details Only, No Form) -->
+    <!-- Streamlined Contact Section -->
     <section id="contact" class="py-20 lg:py-28 bg-gradient-to-b from-parchment to-cream relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -844,7 +846,7 @@
                 <div class="w-24 h-1.5 bg-royalGold mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <!-- Single Centered Elegant Contact Card -->
+            <!-- Contact Information Card -->
             <div class="bg-oxford-900 text-white rounded-2xl p-8 sm:p-12 shadow-2xl border-2 border-royalGold/40 relative overflow-hidden">
                 <div class="absolute -right-12 -bottom-12 text-white/5 text-9xl pointer-events-none">
                     <i class="fa-solid fa-building-columns"></i>
