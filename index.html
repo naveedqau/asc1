@@ -127,19 +127,45 @@
                     </div>
                 </a>
                 <!-- Modern Elegant Sans Navigation Links -->
-                <nav class="hidden xl:flex items-center space-x-1 font-navFont font-semibold text-[13px] text-oxford-800 tracking-tight">
-                    <a href="#home" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Home</a>
-                    <a href="#director" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Director's Welcome</a>
-                    <a href="#academics" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap text-royalCrimson font-bold">Academic Degrees</a>
-                    <a href="#faculty" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Faculty & Fellows</a>
-                    <a href="#wings" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Research Wings</a>
-                    <a href="#publications" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Publications</a>
-                    <a href="#news" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">News & Events</a>
-                    
-                    <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/40 rounded-md font-bold text-xs uppercase tracking-wider shadow-sm transition-all duration-200 whitespace-nowrap inline-flex items-center gap-1.5">
-                        <i class="fa-solid fa-phone text-[10px]"></i> Contact
-                    </a>
-                </nav>
+                <!-- Modern Elegant Sans Navigation Links with Events Dropdown -->
+            <nav class="hidden xl:flex items-center space-x-1 font-navFont font-semibold text-[13px] text-oxford-800 tracking-tight">
+                <a href="#home" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Home</a>
+                <a href="#director" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Director's Welcome</a>
+                <a href="#academics" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap text-royalCrimson font-bold">Academic Degrees</a>
+                <a href="#faculty" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Faculty &amp; Fellows</a>
+                
+                <!-- Events Dropdown Menu -->
+                <div class="relative group">
+                    <button class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 focus:outline-none">
+                        Events <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+                    <!-- Dropdown Menu Box -->
+                    <div class="absolute left-0 top-full pt-1 w-48 hidden group-hover:block transition-all duration-200 z-50">
+                        <div class="bg-white rounded-lg shadow-xl border border-gray-200 py-2 border-t-2 border-t-oxford-800">
+                            <a href="#events-talks" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-comments text-royalGold mr-2"></i> Talk Series
+                            </a>
+                            <a href="#events-seminars" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-chalkboard-user text-royalGold mr-2"></i> Seminars
+                            </a>
+                            <a href="#events-webinars" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-video text-royalGold mr-2"></i> Webinars
+                            </a>
+                            <a href="#events-conferences" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-people-group text-royalGold mr-2"></i> Conference
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <a href="#wings" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Research Wings</a>
+                <a href="#publications" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">Publications</a>
+                <a href="#news" class="px-3 py-2 rounded-md hover:bg-cream/80 hover:text-royalCrimson transition-all duration-200 whitespace-nowrap">News &amp; Events</a>
+                
+                <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/40 rounded-md font-bold text-xs uppercase tracking-wider shadow-sm transition-all duration-200 whitespace-nowrap inline-flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-[10px]"></i> Contact
+                </a>
+            </nav>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="xl:hidden p-2 rounded text-oxford-800 hover:text-royalCrimson focus:outline-none" aria-label="Toggle Navigation">
@@ -153,10 +179,22 @@
             <a href="#home" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Home</a>
             <a href="#director" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Director's Welcome</a>
             <a href="#academics" class="block px-3 py-2 rounded text-sm font-bold text-royalCrimson hover:bg-white">Academic Degrees</a>
-            <a href="#faculty" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Faculty & Academic Fellows</a>
+            <a href="#faculty" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Faculty &amp; Academic Fellows</a>
+            
+            <!-- Mobile Events Submenu -->
+            <div class="px-3 py-1">
+                <span class="block text-xs font-bold text-oxford-800 uppercase tracking-wider mb-1">Events</span>
+                <div class="pl-3 space-y-1 border-l-2 border-royalGold">
+                    <a href="#events-talks" class="block py-1 text-xs text-gray-700 hover:text-royalCrimson">Talk Series</a>
+                    <a href="#events-seminars" class="block py-1 text-xs text-gray-700 hover:text-royalCrimson">Seminars</a>
+                    <a href="#events-webinars" class="block py-1 text-xs text-gray-700 hover:text-royalCrimson">Webinars</a>
+                    <a href="#events-conferences" class="block py-1 text-xs text-gray-700 hover:text-royalCrimson">Conference</a>
+                </div>
+            </div>
+        
             <a href="#wings" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Research Wings</a>
-            <a href="#publications" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Publications & PAJAS Journal</a>
-            <a href="#news" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">News & Events</a>
+            <a href="#publications" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">Publications &amp; PAJAS Journal</a>
+            <a href="#news" class="block px-3 py-2 rounded text-sm font-bold text-oxford-800 hover:bg-white">News &amp; Events</a>
             <a href="#contact" class="block px-3 py-2 rounded text-sm bg-oxford-800 text-royalGold text-center font-bold uppercase tracking-wider">Contact</a>
         </div>
     </header>
