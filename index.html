@@ -46,22 +46,27 @@
     </script>
 
     <style>
-        .hero-oxford-pattern {
-            background: linear-gradient(135deg, rgba(0, 21, 48, 0.92) 0%, rgba(10, 49, 97, 0.85) 100%), 
+       .hero-oxford-pattern {
+            background: linear-gradient(135deg, rgba(0, 21, 48, 0.94) 0%, rgba(10, 49, 97, 0.88) 100%), 
                         url('asc1.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #001530; /* Dark fallback color in case image doesn't load */
+            background-color: #001530;
+            position: relative;
         }
-
-        .gold-border-box {
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(0, 33, 71, 0.08);
+        
+        /* Subtle glowing and high-end typography polish for hero */
+        .hero-title-glow {
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            letter-spacing: -0.02em;
         }
-
-        .badge-pulse {
-            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        
+        .hero-gold-accent-line {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            margin: 1.5rem auto;
         }
 
         @keyframes pulse-ring {
@@ -195,65 +200,74 @@
         </div>
     </header>
 
-    <!-- Hero Section with ASC QAU Background -->
-    <section id="home" class="hero-oxford-pattern text-white relative py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b-4 border-royalGold">
-        <div class="max-w-5xl mx-auto text-center space-y-6">
-            
-            <!-- High-Contrast Top Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-oxford-900/90 border border-royalGold/60 text-royalGold text-xs sm:text-sm font-serifHeading uppercase tracking-widest backdrop-blur-sm shadow-md">
-                <i class="fa-solid fa-building-columns"></i> Premier Federal Centre of Excellence
-            </div>
-            
-            <!-- Main Heading -->
-            <h1 class="font-serifHeading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
-                Area Study Centre for Africa, North &amp; South America
-            </h1>
-            
-            <!-- Subtitle -->
-            <p class="font-serifBody text-lg sm:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed italic font-light drop-shadow">
-                Advancing Interdisciplinary Research, Geopolitical Analysis, and Strategic Regional Studies Across Three Continents
-            </p>
-            
-            <!-- Action Buttons -->
-            <div class="pt-6 flex flex-wrap justify-center items-center gap-4">
-                <a href="#academics" class="px-6 py-3 bg-royalCrimson hover:bg-red-900 border border-royalGold/50 text-white font-serifHeading font-bold text-sm rounded shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 inline-flex items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap text-royalGold"></i> BS Classes Started
-                </a>
-                <a href="#director" class="px-6 py-3 bg-royalGold hover:bg-royalGold-dark text-oxford-900 font-serifHeading font-bold text-sm rounded shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 inline-flex items-center gap-2">
-                    <i class="fa-solid fa-user-tie"></i> Director's Message
-                </a>
-                <a href="#faculty" class="px-6 py-3 bg-oxford-900/80 hover:bg-oxford-800 border border-royalGold/40 hover:border-royalGold text-royalGold font-serifHeading font-semibold text-sm rounded backdrop-blur-sm transition-all duration-200 inline-flex items-center gap-2">
-                    <i class="fa-solid fa-users"></i> Faculty Directory
-                </a>
-            </div>
+    
+    <!-- Hero Section with Refined Academic Elegance -->
+<section id="home" class="hero-oxford-pattern text-white relative py-24 lg:py-32 px-4 sm:px-6 lg:px-8 border-b-4 border-royalGold overflow-hidden">
+    
+    <!-- Decorative background watermark overlay for depth -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+        <i class="fa-solid fa-landmark-dome text-[25rem]"></i>
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center space-y-6 relative z-10">
+        
+        <!-- High-Contrast Top Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-oxford-900/90 border border-royalGold/60 text-royalGold text-xs sm:text-sm font-serifHeading uppercase tracking-widest backdrop-blur-md shadow-lg">
+            <i class="fa-solid fa-building-columns text-royalGold"></i> Premier Federal Centre of Excellence
+        </div>
+        
+        <!-- Main Heading with Enhanced Typography -->
+        <h1 class="font-serifHeading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] hero-title-glow text-white">
+            Area Study Centre for Africa, North &amp; South America
+        </h1>
+
+        <!-- Elegant Gold Divider Line -->
+        <div class="hero-gold-accent-line"></div>
+        
+        <!-- Subtitle with refined styling -->
+        <p class="font-serifBody text-lg sm:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed italic font-light drop-shadow">
+            Advancing Interdisciplinary Research, Geopolitical Analysis, and Strategic Regional Studies Across Three Continents
+        </p>
+        
+        <!-- Action Buttons with Enhanced Hover Effects -->
+        <div class="pt-8 flex flex-wrap justify-center items-center gap-4">
+            <a href="#academics" class="px-6 py-3.5 bg-royalCrimson hover:bg-red-900 border border-royalGold/50 text-white font-serifHeading font-bold text-sm rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-royalGold"></i> BS Classes Started
+            </a>
+            <a href="#director" class="px-6 py-3.5 bg-royalGold hover:bg-royalGold-dark text-oxford-900 font-serifHeading font-bold text-sm rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2">
+                <i class="fa-solid fa-user-tie"></i> Director's Message
+            </a>
+            <a href="#faculty" class="px-6 py-3.5 bg-oxford-900/80 hover:bg-oxford-800 border border-royalGold/40 hover:border-royalGold text-royalGold font-serifHeading font-semibold text-sm rounded-lg backdrop-blur-md transition-all duration-300 inline-flex items-center gap-2">
+                <i class="fa-solid fa-users"></i> Faculty Directory
+            </a>
+        </div>
+    </div>
+
+    <!-- Ultra-Compact Capsule Badges Grid -->
+    <div class="mt-12 max-w-3xl mx-auto flex flex-wrap justify-center items-center gap-3 relative z-10">
+        
+        <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-2 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
+            <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">Act XLV</span>
+            <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Statutory Charter 1975</span>
         </div>
 
-        <!-- Ultra-Compact Capsule Badges Grid -->
-            <div class="mt-8 max-w-3xl mx-auto flex flex-wrap justify-center items-center gap-3">
-        
-                <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-1.5 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
-                    <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">Act XLV</span>
-                    <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Statutory Charter 1975</span>
-                </div>
-        
-                <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-1.5 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
-                    <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">BS Classes</span>
-                    <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Active This Semester</span>
-                </div>
-        
-                <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-1.5 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
-                    <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">Faculty</span>
-                    <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Specialized Scholars</span>
-                </div>
-        
-                <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-1.5 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
-                    <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">QAU Campus</span>
-                    <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Social Sciences Faculty</span>
-                </div>
+        <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-2 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
+            <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">BS Classes</span>
+            <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Active This Semester</span>
+        </div>
 
-         </div>
-    </section>
+        <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-2 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
+            <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">Faculty</span>
+            <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Specialized Scholars</span>
+        </div>
 
+        <div class="bg-oxford-900/85 backdrop-blur-md border border-royalGold/40 hover:border-royalGold px-4 py-2 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex flex-col items-center justify-center text-center">
+            <span class="font-serifHeading text-sm font-bold text-royalGold leading-tight">QAU Campus</span>
+            <span class="text-[8px] text-gray-200 uppercase tracking-wider font-sans font-semibold leading-tight">Social Sciences Faculty</span>
+        </div>
+
+    </div>
+</section>
     <!-- ACADEMIC PROGRAMS SECTION -->
     <section id="academics" class="py-16 lg:py-24 bg-white border-b border-gray-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
