@@ -114,15 +114,15 @@
         </div>
     </div>
 
-    <!-- Single Line Title Header & Navigation Bar -->
+    <!-- Main Navigation Bar -->
     <header class="bg-white sticky top-0 z-40 shadow-md border-b-2 border-royalGold/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 gap-2 sm:gap-4 overflow-hidden">
                 
-                <!-- Title & Crest on ONE LINE -->
-                <a href="#home" class="flex items-center gap-2.5 sm:gap-3.5 group flex-shrink">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-oxford-800 border-2 border-royalGold p-0.5 shadow-sm group-hover:scale-105 transition-transform duration-300 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                        <img src="qau-1.png" alt="ASC Logo" class="w-full h-full object-contain rounded-full" onerror="this.src='https://placehold.co/100x100/002147/D4AF37?text=ASC'">
+                <!-- Title & Crest on ONE LINE with Clean Natural Frame -->
+                <a href="#home" class="flex items-center gap-3 sm:gap-4 group flex-shrink">
+                    <div class="h-12 sm:h-14 w-auto flex items-center justify-center p-1 rounded-md bg-white border border-gray-200 shadow-sm group-hover:border-royalGold group-hover:shadow transition-all duration-300 flex-shrink-0">
+                        <img src="qau-1.png" alt="ASC Logo" class="h-full w-auto object-contain" onerror="this.src='https://placehold.co/120x120/002147/D4AF37?text=ASC'">
                     </div>
                     <div class="flex flex-col justify-center min-w-0">
                         <div class="flex items-baseline gap-1.5 sm:gap-2 whitespace-nowrap overflow-hidden text-ellipsis">
@@ -1003,7 +1003,9 @@
                 card.innerHTML = `
                     <div class="p-6">
                         <div class="flex items-center gap-4 mb-4">
-                            <img src="${fac.img}" alt="${fac.name}" class="w-20 h-20 rounded-full object-cover border-2 border-royalGold shadow" onerror="this.src='https://placehold.co/200x200/002147/D4AF37?text=${fac.name.charAt(0)}'">
+                            <div class="w-20 h-20 rounded-lg overflow-hidden border-2 border-royalGold shadow flex-shrink-0 bg-oxford-800">
+                                <img src="${fac.img}" alt="${fac.name}" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/200x200/002147/D4AF37?text=${fac.name.charAt(0)}'">
+                            </div>
                             <div>
                                 <span class="text-[10px] uppercase tracking-wider font-bold bg-oxford-800 text-royalGold px-2 py-0.5 rounded font-sans">${fac.badge}</span>
                                 <h3 class="font-serifHeading text-lg font-bold text-oxford-800 mt-1">${fac.name}</h3>
