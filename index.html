@@ -53,7 +53,7 @@
                     },
                     boxShadow: {
                         'academic': '0 10px 30px -5px rgba(0, 21, 48, 0.12), 0 4px 12px -2px rgba(0, 21, 48, 0.08)',
-                        'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+                        'gold-glow': '0 0 25px rgba(212, 175, 55, 0.35)',
                         'crimson-glow': '0 0 25px rgba(128, 0, 32, 0.25)',
                         'glass': '0 8px 32px 0 rgba(0, 15, 35, 0.37)'
                     }
@@ -71,19 +71,65 @@
             --bg-parchment: #FDFBF7;
         }
 
+        /* Nav Link Underline Hover Effect */
+        .nav-link-item {
+            position: relative;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .nav-link-item::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: 2px;
+            left: 50%;
+            background: linear-gradient(90deg, #D4AF37, #800020);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-link-item:hover::after,
+        .nav-link-item.active::after {
+            width: 80%;
+        }
+
+        /* Shimmer Effect for Contact Button */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(200%); }
+        }
+
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shimmer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.25), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 4s infinite;
+        }
+
         /* Glassmorphism Styles */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
         .glass-panel-dark {
-            background: rgba(0, 21, 48, 0.85);
+            background: rgba(0, 21, 48, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .glass-panel-light {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         /* Gradient Decorative Text */
@@ -93,24 +139,9 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Custom Pattern Overlays */
         .hero-pattern {
             background: radial-gradient(circle at 50% 20%, rgba(10, 49, 97, 0.7) 0%, rgba(0, 12, 28, 0.96) 80%),
                         linear-gradient(135deg, rgba(0, 33, 71, 0.95), rgba(128, 0, 32, 0.85));
-        }
-
-        /* Animated Divider */
-        .gold-border-glow {
-            position: relative;
-        }
-        .gold-border-glow::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
         }
 
         /* Smooth Scrollbar */
@@ -127,26 +158,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #b38f24;
         }
-
-        /* Custom Scroll Active Highlight */
-        .nav-link.active {
-            color: #D4AF37;
-            border-bottom: 2px solid #D4AF37;
-        }
-
-        /* Keyframe Animations */
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        .animate-float {
-            animation: floatSlow 6s ease-in-out infinite;
-        }
     </style>
 </head>
 <body class="font-sans bg-parchment text-gray-800 antialiased selection:bg-royalGold selection:text-oxford-900 min-h-screen flex flex-col">
 
-    <!-- Statutory Header Bar -->
+    <!-- Statutory Top Header Bar -->
     <div class="bg-oxford-950 text-gray-200 text-xs py-2 px-4 sm:px-8 border-b border-royalGold/30 relative z-50">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
@@ -170,106 +186,128 @@
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="bg-white sticky top-0 z-40 shadow-academic border-b-2 border-royalGold/40 transition-all duration-300">
+    <!-- Refined Main Navigation Bar -->
+    <header class="glass-header sticky top-0 z-40 shadow-academic border-b-2 border-royalGold/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3">
+            <div class="flex justify-between items-center py-2.5 sm:py-3">
                 
-                <!-- Crest & Institutional Title -->
-                <a href="#home" class="flex items-center gap-3.5 group">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-oxford-900 p-1 border-2 border-royalGold shadow-md group-hover:scale-105 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                        <!-- Custom Crest Emblem Graphic -->
-                        <div class="w-full h-full rounded-full bg-oxford-800 flex flex-col items-center justify-center text-royalGold p-1 text-center">
-                            <i class="fa-solid fa-earth-americas text-lg sm:text-xl text-royalGold"></i>
+                <!-- Refined Brand Crest & Title Area -->
+                <a href="#home" class="flex items-center gap-3 sm:gap-4 group">
+                    <!-- Emblem Logo with Dual Gold Outer Ring -->
+                    <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-oxford-900 p-0.5 border-2 border-royalGold shadow-md group-hover:shadow-gold-glow group-hover:scale-105 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                        <div class="w-full h-full rounded-full bg-oxford-800 border border-royalGold/40 flex items-center justify-center text-royalGold p-1 text-center">
+                            <i class="fa-solid fa-earth-americas text-lg sm:text-xl text-royalGold group-hover:rotate-12 transition-transform duration-500"></i>
                         </div>
                     </div>
                     <div>
-                        <span class="font-cinzel text-base sm:text-lg md:text-xl font-bold text-oxford-900 tracking-tight block group-hover:text-royalCrimson transition-colors">
-                            Area Study Centre
-                        </span>
-                        <p class="font-serifBody text-xs sm:text-sm text-royalCrimson font-bold tracking-wide">
+                        <div class="flex items-center gap-2">
+                            <span class="font-cinzel text-base sm:text-lg lg:text-xl font-black text-oxford-950 tracking-wider block leading-tight group-hover:text-royalCrimson transition-colors">
+                                AREA STUDY CENTRE
+                            </span>
+                        </div>
+                        <p class="font-serifBody text-xs sm:text-sm text-royalCrimson font-bold tracking-wide leading-tight mt-0.5">
                             for Africa, North &amp; South America
                         </p>
-                        <p class="text-[10px] text-gray-500 font-sans hidden sm:block">
+                        <p class="text-[9px] sm:text-[10px] text-gray-500 font-sans tracking-tight hidden sm:block mt-0.5">
                             Quaid-i-Azam University, Islamabad • Act XLV 1975
                         </p>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden xl:flex items-center space-x-1 font-sans font-semibold text-xs text-oxford-900">
-                    <a href="#home" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">Home</a>
-                    <a href="#about" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">About Centre</a>
-                    <a href="#academics" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all text-royalCrimson font-bold">Academic Degrees</a>
-                    <a href="#director" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">Director's Welcome</a>
-                    <a href="#faculty" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">Faculty &amp; Fellows</a>
+                <!-- Refined Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-1.5 font-sans text-[13px] font-semibold text-oxford-900">
+                    <a href="#home" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">Home</a>
+                    <a href="#about" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">About Centre</a>
                     
-                    <!-- Events Dropdown -->
+                    <!-- Highlighted Active Academic Link -->
+                    <a href="#academics" class="nav-link-item active px-3 py-2 text-royalCrimson font-bold hover:text-royalCrimson-dark flex items-center gap-1">
+                        <span>Academic Degrees</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-royalCrimson animate-ping"></span>
+                    </a>
+                    
+                    <a href="#director" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">Director's Welcome</a>
+                    <a href="#faculty" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">Faculty &amp; Fellows</a>
+                    
+                    <!-- Events Interactive Dropdown -->
                     <div class="relative group">
-                        <button class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all flex items-center gap-1 focus:outline-none">
+                        <button class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson flex items-center gap-1.5 focus:outline-none">
                             <span>Events &amp; Talks</span>
-                            <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-royalGold group-hover:rotate-180 transition-transform duration-300"></i>
                         </button>
-                        <div class="absolute left-0 top-full pt-1 w-52 hidden group-hover:block transition-all z-50">
-                            <div class="bg-white rounded-lg shadow-2xl border border-gray-200 py-2 border-t-2 border-t-royalGold">
-                                <a href="https://asc.qau.edu.pk/talk-series/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-comments text-royalGold mr-2"></i> ASC Talk Series
+                        <!-- Smooth Floating Dropdown Menu -->
+                        <div class="absolute right-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform group-hover:translate-y-0 translate-y-1">
+                            <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-gray-200/80 py-2 border-t-4 border-t-royalGold overflow-hidden">
+                                <a href="https://asc.qau.edu.pk/talk-series/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors group/item">
+                                    <div class="w-7 h-7 rounded-lg bg-oxford-50 border border-oxford-800/10 flex items-center justify-center text-royalGold mr-3 group-hover/item:bg-oxford-800 transition-colors">
+                                        <i class="fa-solid fa-comments text-xs"></i>
+                                    </div>
+                                    <span class="font-semibold">ASC Talk Series</span>
                                 </a>
-                                <a href="https://asc.qau.edu.pk/category/seminar/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-chalkboard-user text-royalGold mr-2"></i> Academic Seminars
+                                <a href="https://asc.qau.edu.pk/category/seminar/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors group/item">
+                                    <div class="w-7 h-7 rounded-lg bg-oxford-50 border border-oxford-800/10 flex items-center justify-center text-royalGold mr-3 group-hover/item:bg-oxford-800 transition-colors">
+                                        <i class="fa-solid fa-chalkboard-user text-xs"></i>
+                                    </div>
+                                    <span class="font-semibold">Academic Seminars</span>
                                 </a>
-                                <a href="https://asc.qau.edu.pk/category/webinar/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-video text-royalGold mr-2"></i> International Webinars
+                                <a href="https://asc.qau.edu.pk/category/webinar/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors group/item">
+                                    <div class="w-7 h-7 rounded-lg bg-oxford-50 border border-oxford-800/10 flex items-center justify-center text-royalGold mr-3 group-hover/item:bg-oxford-800 transition-colors">
+                                        <i class="fa-solid fa-video text-xs"></i>
+                                    </div>
+                                    <span class="font-semibold">International Webinars</span>
                                 </a>
-                                <a href="https://asc.qau.edu.pk/conference/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-people-group text-royalGold mr-2"></i> Annual Conferences
+                                <a href="https://asc.qau.edu.pk/conference/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors group/item">
+                                    <div class="w-7 h-7 rounded-lg bg-oxford-50 border border-oxford-800/10 flex items-center justify-center text-royalGold mr-3 group-hover/item:bg-oxford-800 transition-colors">
+                                        <i class="fa-solid fa-people-group text-xs"></i>
+                                    </div>
+                                    <span class="font-semibold">Annual Conferences</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="#wings" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">Research Wings</a>
-                    <a href="#publications" class="px-3 py-2 rounded-md hover:bg-cream hover:text-royalCrimson transition-all">PAJAS Journal</a>
+                    <a href="#wings" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">Research Wings</a>
+                    <a href="#publications" class="nav-link-item px-3 py-2 text-oxford-900 hover:text-royalCrimson">PAJAS Journal</a>
                     
                     <!-- Search Header Button -->
-                    <button onclick="toggleGlobalSearch()" class="p-2 text-oxford-800 hover:text-royalGold transition-colors rounded-full hover:bg-cream" title="Quick Search">
+                    <button onclick="toggleGlobalSearch()" class="p-2 text-oxford-800 hover:text-royalGold transition-colors rounded-full hover:bg-cream ml-1" title="Quick Search">
                         <i class="fa-solid fa-magnifying-glass text-sm"></i>
                     </button>
 
-                    <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/50 rounded-md font-bold text-xs uppercase tracking-wider shadow-sm transition-all inline-flex items-center gap-1.5">
-                        <i class="fa-solid fa-paper-plane text-[10px]"></i> Contact
+                    <!-- Refined Shimmer Contact Button -->
+                    <a href="#contact" class="btn-shimmer ml-3 px-5 py-2.5 bg-oxford-900 hover:bg-oxford-950 text-royalGold border-2 border-royalGold/80 hover:border-royalGold rounded-lg font-cinzel font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-gold-glow transition-all duration-300 inline-flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane text-royalGold text-xs"></i>
+                        <span>CONTACT</span>
                     </a>
                 </nav>
 
-                <!-- Mobile Navigation Button -->
+                <!-- Mobile Header Right Actions -->
                 <div class="flex items-center gap-2 xl:hidden">
-                    <button onclick="toggleGlobalSearch()" class="p-2 text-oxford-800 hover:text-royalGold" aria-label="Search">
+                    <button onclick="toggleGlobalSearch()" class="p-2 text-oxford-900 hover:text-royalGold rounded-lg hover:bg-cream" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass text-lg"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="p-2 rounded text-oxford-900 hover:text-royalCrimson focus:outline-none" aria-label="Toggle Navigation">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-oxford-900 hover:text-royalCrimson hover:bg-cream focus:outline-none transition-colors" aria-label="Toggle Navigation">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Interactive Global Search Bar Dropdown -->
-        <div id="global-search-bar" class="hidden bg-oxford-900 text-white border-b border-royalGold/30 py-4 px-4 shadow-2xl">
+        <!-- Global Search Overlay Dropdown -->
+        <div id="global-search-bar" class="hidden bg-oxford-950 text-white border-b-2 border-royalGold/40 py-4 px-4 shadow-2xl">
             <div class="max-w-4xl mx-auto flex items-center gap-3">
                 <i class="fa-solid fa-magnifying-glass text-royalGold text-lg"></i>
-                <input type="text" id="global-search-input" onkeyup="performGlobalSearch()" placeholder="Search ASC degrees, faculty profiles, PAJAS journal, research wings..." class="w-full bg-oxford-950/80 border border-royalGold/40 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-royalGold">
+                <input type="text" id="global-search-input" onkeyup="performGlobalSearch()" placeholder="Search ASC degrees, faculty profiles, PAJAS journal, research wings..." class="w-full bg-oxford-900/90 border border-royalGold/40 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-royalGold">
                 <button onclick="toggleGlobalSearch()" class="text-gray-400 hover:text-white px-2 text-lg">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <!-- Dynamic Search Suggestions Overlay -->
-            <div id="search-results-box" class="max-w-4xl mx-auto mt-3 hidden bg-oxford-950 rounded-lg border border-royalGold/30 p-4 text-xs space-y-2 max-h-60 overflow-y-auto">
-                <!-- Results rendered dynamically -->
+            <!-- Search Results Suggestions -->
+            <div id="search-results-box" class="max-w-4xl mx-auto mt-3 hidden bg-oxford-900 rounded-lg border border-royalGold/30 p-4 text-xs space-y-2 max-h-60 overflow-y-auto">
             </div>
         </div>
 
-        <!-- Mobile Drawer Navigation Overlay -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-oxford-900 text-white border-t border-royalGold/30 px-6 pt-4 pb-8 space-y-3 font-sans">
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-oxford-950 text-white border-t-2 border-royalGold/40 px-6 pt-4 pb-8 space-y-3 font-sans">
             <a href="#home" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold hover:text-royalGold">Home</a>
             <a href="#about" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold hover:text-royalGold">About Centre</a>
             <a href="#academics" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold text-royalGold">Academic Degrees (BS/MPhil/PhD)</a>
@@ -277,7 +315,7 @@
             <a href="#faculty" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold hover:text-royalGold">Faculty &amp; Fellows</a>
             <a href="#wings" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold hover:text-royalGold">Research Wings</a>
             <a href="#publications" onclick="closeMobileMenu()" class="block py-2 rounded text-sm font-bold hover:text-royalGold">PAJAS Journal</a>
-            <a href="#contact" onclick="closeMobileMenu()" class="block py-2.5 mt-2 bg-royalGold text-oxford-950 text-center font-bold text-xs uppercase rounded">Contact Office</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block py-3 mt-2 bg-royalGold text-oxford-950 text-center font-cinzel font-bold text-xs uppercase rounded-lg shadow-md">Contact Office</a>
         </div>
     </header>
 
@@ -1274,7 +1312,7 @@
             }
         ];
 
-        // Render Faculty Cards Dynamically
+        // Render Faculty Cards
         function renderFacultyCards(items) {
             const grid = document.getElementById('faculty-grid');
             grid.innerHTML = '';
@@ -1320,7 +1358,6 @@
         window.addEventListener('DOMContentLoaded', () => {
             renderFacultyCards(facultyData);
 
-            // Scroll Back to Top Listener
             window.addEventListener('scroll', () => {
                 const btn = document.getElementById('back-to-top');
                 if (window.scrollY > 400) {
@@ -1369,7 +1406,7 @@
             }
         }
 
-        // Search Faculty by Name
+        // Search Faculty
         function searchFacultyByName() {
             const query = document.getElementById('faculty-search-input').value.toLowerCase();
             const filtered = facultyData.filter(f => f.name.toLowerCase().includes(query) || f.bio.toLowerCase().includes(query));
@@ -1415,7 +1452,7 @@
             document.getElementById('info-modal').classList.add('hidden');
         }
 
-        // Global Search Bar Controls
+        // Global Search Controls
         function toggleGlobalSearch() {
             const searchBar = document.getElementById('global-search-bar');
             searchBar.classList.toggle('hidden');
@@ -1438,14 +1475,12 @@
 
             const matches = [];
             
-            // Search Faculty
             facultyData.forEach(f => {
                 if (f.name.toLowerCase().includes(query) || f.title.toLowerCase().includes(query)) {
                     matches.push({ title: f.name + " (" + f.title + ")", type: "Faculty Profile", link: "#faculty" });
                 }
             });
 
-            // Search Keywords
             if ("bs area studies".includes(query) || "admissions".includes(query)) {
                 matches.push({ title: "BS Area Studies Degree Program (4-Year)", type: "Academics", link: "#academics" });
             }
@@ -1490,7 +1525,7 @@
             mobileMenu.classList.add('hidden');
         }
 
-        // Form Submit Handler
+        // Form Submission
         function handleFormSubmit(e) {
             e.preventDefault();
             document.getElementById('contact-form').reset();
@@ -1499,7 +1534,6 @@
             setTimeout(() => msg.classList.add('hidden'), 5000);
         }
 
-        // Smooth Scroll to Top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
