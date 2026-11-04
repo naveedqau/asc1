@@ -114,90 +114,80 @@
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="bg-white sticky top-0 z-40 shadow-md border-b-2 border-royalGold/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 gap-2 sm:gap-4 overflow-hidden">
+   <!-- Main Navigation Bar -->
+<header class="bg-white sticky top-0 z-50 shadow-md border-b-2 border-royalGold/40 overflow-visible">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20 gap-4">
+            
+            <!-- Brand Title -->
+            <a href="#home" class="flex items-center gap-3 group flex-shrink-0">
+                <div class="w-11 h-11 rounded-full bg-oxford-800 border-2 border-royalGold p-0.5 shadow-sm group-hover:scale-105 transition-transform duration-300 flex items-center justify-center overflow-hidden">
+                    <img src="qau-1.png" alt="ASC Logo" class="w-full h-full object-contain rounded-full" onerror="this.src='https://placehold.co/100x100/002147/D4AF37?text=ASC'">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="flex items-baseline gap-2 whitespace-nowrap">
+                        <span class="font-serifHeading text-lg sm:text-xl font-extrabold text-oxford-800 tracking-tight group-hover:text-royalCrimson transition-colors">
+                            AREA STUDY CENTRE
+                        </span>
+                        <span class="hidden lg:inline text-xs font-serifBody text-royalCrimson font-semibold italic">
+                            for Africa, North &amp; South America
+                        </span>
+                    </div>
+                    <p class="text-[11px] text-gray-500 font-sans hidden sm:block leading-none">
+                        Quaid-i-Azam University, Islamabad
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden xl:flex items-center gap-1 sm:gap-2 font-navFont font-bold text-xs sm:text-[13px] text-oxford-800 whitespace-nowrap">
+                <a href="#home" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">Home</a>
+                <a href="#statutory" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">About</a>
+                <a href="#academics" class="px-2.5 py-2 rounded text-royalCrimson hover:text-royalCrimson nav-link-effect active transition-colors">Academics</a>
+                <a href="#director" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">Director</a>
+                <a href="#faculty" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">Faculty</a>
                 
-                <!-- Title & Crest on ONE LINE with Clean Natural Frame -->
-                <a href="#home" class="flex items-center gap-3 sm:gap-4 group flex-shrink">
-                    <div class="h-12 sm:h-14 w-auto flex items-center justify-center p-1 rounded-md bg-white border border-gray-200 shadow-sm group-hover:border-royalGold group-hover:shadow transition-all duration-300 flex-shrink-0">
-                        <img src="qau-1.png" alt="ASC Logo" class="h-full w-auto object-contain" onerror="this.src='https://placehold.co/120x120/002147/D4AF37?text=ASC'">
-                    </div>
-                    <div class="flex flex-col justify-center min-w-0">
-                        <div class="flex items-baseline gap-1.5 sm:gap-2 whitespace-nowrap overflow-hidden text-ellipsis">
-                            <span class="font-serifHeading text-sm sm:text-base md:text-lg lg:text-xl font-extrabold text-oxford-800 tracking-tight group-hover:text-royalCrimson transition-colors">
-                                AREA STUDY CENTRE
-                            </span>
-                            <span class="text-[11px] sm:text-xs md:text-sm font-serifBody text-royalCrimson font-bold italic tracking-tight hidden sm:inline">
-                                for Africa, North &amp; South America
-                            </span>
+                <!-- FIXED DROPDOWN CONTAINER -->
+                <div class="relative group py-2">
+                    <button class="px-2.5 py-1 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect flex items-center gap-1 focus:outline-none">
+                        Events <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+
+                    <!-- Dropdown Box with z-50 and explicit padding bridge -->
+                    <div class="absolute left-0 top-full pt-0 w-48 hidden group-hover:block transition-all duration-200 z-50 shadow-2xl">
+                        <div class="bg-white rounded-lg shadow-2xl border border-gray-200 py-2 border-t-4 border-t-oxford-800">
+                            <a href="https://asc.qau.edu.pk/talk-series/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-comments text-royalGold mr-2.5 text-sm"></i> Talk Series
+                            </a>
+                            <a href="https://asc.qau.edu.pk/category/seminar/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-chalkboard-user text-royalGold mr-2.5 text-sm"></i> Seminars
+                            </a>
+                            <a href="https://asc.qau.edu.pk/category/webinar/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-video text-royalGold mr-2.5 text-sm"></i> Webinars
+                            </a>
+                            <a href="https://asc.qau.edu.pk/conference/" target="_blank" class="flex items-center px-4 py-2.5 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors font-sans">
+                                <i class="fa-solid fa-people-group text-royalGold mr-2.5 text-sm"></i> Conferences
+                            </a>
                         </div>
-                        <p class="text-[10px] text-gray-500 font-sans hidden md:block leading-none mt-0.5">
-                            Quaid-i-Azam University, Islamabad
-                        </p>
                     </div>
+                </div>
+            
+                <a href="#wings" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">Wings</a>
+                <a href="#publications" class="px-2.5 py-2 rounded text-oxford-800 hover:text-royalCrimson nav-link-effect transition-colors">Journal</a>
+                
+                <a href="#contact" class="ml-2 px-4 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/50 rounded-md font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex-shrink-0 inline-flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane text-[11px]"></i> Contact
                 </a>
+            </nav>
 
-                <!-- Navigation Links strictly on ONE LINE -->
-                <nav class="hidden xl:flex items-center gap-1 lg:gap-2 font-navFont font-bold text-xs text-oxford-800 whitespace-nowrap flex-shrink-0">
-                    <a href="#home" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">Home</a>
-                    <a href="#about" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">About</a>
-                    <a href="#academics" class="px-2 py-1.5 rounded text-royalCrimson font-extrabold hover:text-royalCrimson nav-link-effect active transition-colors">Academics</a>
-                    <a href="#director" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">Director</a>
-                    <a href="#faculty" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">Faculty</a>
-                    
-                    <!-- Events Dropdown -->
-                    <div class="relative group">
-                        <button class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect flex items-center gap-1 focus:outline-none">
-                            Events <i class="fa-solid fa-chevron-down text-[10px] text-royalGold group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <div class="absolute right-0 top-full pt-1 w-48 hidden group-hover:block transition-all duration-200 z-50">
-                            <div class="bg-white rounded-lg shadow-xl border border-gray-200 py-2 border-t-2 border-t-oxford-800">
-                                <a href="https://asc.qau.edu.pk/talk-series/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-comments text-royalGold mr-2"></i> Talk Series
-                                </a>
-                                <a href="https://asc.qau.edu.pk/category/seminar/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-chalkboard-user text-royalGold mr-2"></i> Seminars
-                                </a>
-                                <a href="https://asc.qau.edu.pk/category/webinar/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-video text-royalGold mr-2"></i> Webinars
-                                </a>
-                                <a href="https://asc.qau.edu.pk/conference/" target="_blank" class="block px-4 py-2 text-xs text-gray-700 hover:bg-cream hover:text-royalCrimson transition-colors">
-                                    <i class="fa-solid fa-people-group text-royalGold mr-2"></i> Conferences
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Mobile Drawer Button -->
+            <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-md text-oxford-800 hover:bg-cream focus:outline-none" aria-label="Toggle Mobile Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
 
-                    <a href="#wings" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">Wings</a>
-                    <a href="#publications" class="px-2 py-1.5 rounded hover:text-royalCrimson nav-link-effect transition-colors">Journal</a>
-                    
-                    <!-- Contact CTA Button properly contained -->
-                    <a href="#contact" class="ml-1.5 px-3.5 py-2 bg-oxford-800 hover:bg-oxford-900 text-royalGold border border-royalGold/50 rounded font-extrabold text-[11px] uppercase tracking-wider shadow transition-all flex-shrink-0 inline-flex items-center gap-1.5">
-                        <i class="fa-solid fa-paper-plane text-[10px]"></i> Contact
-                    </a>
-                </nav>
-
-                <!-- Mobile Navigation Menu Toggle Button -->
-                <button id="mobile-menu-btn" class="xl:hidden p-2 rounded text-oxford-800 hover:bg-cream focus:outline-none" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
-            </div>
         </div>
-
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-cream border-t border-gray-300 px-4 pt-3 pb-6 space-y-2 font-sans text-sm">
-            <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">Home</a>
-            <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">About Centre</a>
-            <a href="#academics" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-royalCrimson hover:bg-white">Academic Degrees (BS/MPhil/PhD)</a>
-            <a href="#director" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">Director's Welcome</a>
-            <a href="#faculty" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">Faculty &amp; Research Fellows</a>
-            <a href="#wings" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">Research Wings</a>
-            <a href="#publications" onclick="closeMobileMenu()" class="block px-3 py-2 rounded font-bold text-oxford-800 hover:bg-white">PAJAS Journal</a>
-            <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2.5 bg-oxford-800 text-royalGold text-center font-bold uppercase tracking-wider rounded">Contact Secretariat</a>
-        </div>
-    </header>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-oxford-pattern text-white relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-royalGold overflow-hidden">
